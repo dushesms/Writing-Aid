@@ -1,0 +1,17 @@
+pandas==1.2.2
+numpy
+streamlit==0.76.0
+textblob==0.15.3
+nltk==3.5
+spacy==3.0.3
+keras==2.4.3
+tensorflow==2.4.1
+htbuilder==0.3.0
+regex==2020.11.13
+collection==0.1.6
+jamspell
+streamlit-lottie
+pyenchant
+language-tool-python
+gingerit
+nlprule
