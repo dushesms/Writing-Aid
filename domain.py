@@ -1,13 +1,7 @@
 from dataclasses import dataclass
-from typing import TypedDict, Dict, List
-
-
-class CorrectionType(TypedDict):
-    correct: List[str]
-    position: int
-
+from collections import OrderedDict
 
 @dataclass
 class SuggestCorrection:
-    data: Dict[str, CorrectionType]
+    data: OrderedDict
     percentage_of_incorrect: float
