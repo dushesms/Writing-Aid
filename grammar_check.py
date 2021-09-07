@@ -1,6 +1,7 @@
 import language_tool_python
 from write_results import write_results
 from nlprule import Tokenizer, Rules
+from domain import SuggestCorrection
 from collections import OrderedDict
 
 def compare(text1, text2):
