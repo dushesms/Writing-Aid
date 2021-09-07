@@ -1,6 +1,5 @@
 from textblob import TextBlob
 import nltk
-import jamspell
 import enchant
 from domain import SuggestCorrection
 from utils import percentage_of_incorrect

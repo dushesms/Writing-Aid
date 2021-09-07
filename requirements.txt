@@ -9,7 +9,6 @@ tensorflow
 htbuilder
 regex
 collection
-jamspell
 pyenchant
 language-tool-python==2.5.5
 nlprule==0.6.4
