@@ -1,5 +1,4 @@
 import language_tool_python
-from gingerit.gingerit import GingerIt
 from domain import SuggestCorrection
 from write_results import write_results
 from nlprule import Tokenizer, Rules

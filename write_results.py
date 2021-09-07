@@ -1,3 +1,6 @@
+"""
+Highlight the mistakes in the text in red and suggestions in green using the html component htbuilder.
+"""
 import re
 import nltk
 import streamlit as st
@@ -11,7 +14,6 @@ def tokenize_input(text):
 def write_results(text:str, p:float, d:dict):
     text_copy = text[:]
     st.write("Percentage of mistakes: " + str(round(p, 2)) + "%")
-    #print(f"{text=}, {p=}, {d=}")
     splitted_text = text_copy.split()
     l = len(splitted_text) / 13 * 28
 
@@ -49,30 +51,3 @@ def write_results(text:str, p:float, d:dict):
         corrects_text = str.join(" or ", corrects_of_list)
         message = value['message']
         annotated_text(50, "Instead of ", (key, "", "#faa"), " should be ", (corrects_text, "", "#afa"), "      Explanation:  ",message)
-
-
-"""st.write("Percentage of mistakes: " + str(round(p, 2)) + "%")
-    splitted_text = text.split()
-    positions_of_incorrect = [i['position'] for i in d.values()]
-    for i in range(1, len(splitted_text)+1):
-        if not i in positions_of_incorrect:
-            splitted_text[i-1] = " " + splitted_text[i-1] + " "
-        if i in positions_of_incorrect:
-            splitted_text[i-1] = (splitted_text[i-1], "", "#faa")
-    l = len(splitted_text) / 13 * 28
-    annotated_text(l, *splitted_text)
-    st.write("Incorrect: ")
-    for key, value in d.items():
-        annotated_text(35, (key, "", "#faa"), " must be written as ", (str(value['correct']), "", "#afa"))
-    
-    
-        for index in range(len(splitted_text)):
-            if splitted_text[index].lower() == mistake_word.lower():
-                positions_of_incorrect = index
-                index+=1
-                if not i in positions_of_incorrect:
-                    splitted_text[i - 1] = " " + splitted_text[i - 1] + " "
-                if i in positions_of_incorrect:
-                    splitted_text[i - 1] = (splitted_text[i - 1], "", "#faa")    
-        
-        """
