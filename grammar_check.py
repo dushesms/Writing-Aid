@@ -1,17 +1,16 @@
 import language_tool_python
-import nltk
 from gingerit.gingerit import GingerIt
 from domain import SuggestCorrection
 from write_results import write_results
 from nlprule import Tokenizer, Rules
-import streamlit as st
+from collections import OrderedDict
 
 def compare(text1, text2):
     l1 = text1.split()
     l2 = text2.split()
     correct = 0
     incorrect = 0
-    dict_of_incorrect = {}
+    dict_of_incorrect = OrderedDict()
     for i in range(0, len(l2)):
         if l1[i] != l2[i]:
             incorrect += 1
@@ -27,7 +26,7 @@ def nlp_rule_check(text):
     splitted_text = text.split()
     tokenizer = Tokenizer.load("en")
     rules = Rules.load("en", tokenizer)
-    d = {}
+    d = OrderedDict()
     index = -1
     for s in rules.suggest(text):
         start = s.start

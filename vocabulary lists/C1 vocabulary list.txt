@@ -1,3 +1,5 @@
+diverse
+qualified
 abandon
 abnormal
 aboard
@@ -8,54 +10,37 @@ abuse
 accelerate
 acceptable
 acceptance
-accepted
 accessory
 acclaimed
 accomplish
 accordance
-account
 accumulate
 accusation
 accustomed
 acknowledge
 acquaintance
-action
-active
 adaptation
 addictive
 address
 administration
 administrative
 administrator
-adult
-adviser
 affluent
 affordable
-after
 after all
 against
 agency
 agenda
 aggression
 aggressive
-ago
-agree
-ahead
-aid
-in aid of 
+in aid of
 with the aid of
-air
-alarm
 alarming
-alert
-all
 allegation
 alleged
 allocate
-allow
 allowance
 ally
-alone
 alongside
 alteration
 alternate
@@ -80,14 +65,10 @@ appetite
 applaud
 applause
 appliance
-apply
 appoint
 archaeologist
 archaeology
 arise
-arrival
-art
-as
 as it happens
 as many as
 as yet
@@ -100,7 +81,6 @@ association
 assumption
 assurance
 assure
-at
 at an angle
 at the expense of
 at face value
@@ -113,7 +93,6 @@ all at once
 at random
 at times
 attached to
-attack
 attain
 attendance
 auction
@@ -125,46 +104,30 @@ be authorized to do
 avenue
 average
 awareness
-away
-back
 bacteria
-bad
 balance
 be on the ball
 bankrupt
-basically
-basis
 on the basis of
 beak
 bear left
 bear right
-beat
 beat about the bush
 beat around the bush
-before
 before you know it
-behind
 behind the times
-best
 the next best thing
 have the best of both worlds
-bet
-between
 beware
 beyond
 biased
-bid
-big
 bilingual
-birth
-bit
 a bit of a change
 bit by bit
 be to blame
 turn a blind eye
 the blind
 blindness
-block
 new blood
 bloody
 out of the blue
@@ -175,11 +138,9 @@ bounce back
 bound
 boundary
 boundary
-brain
 brass
 break even
 breakdown
-breath
 catch your breath
 get your breath back
 bribe
@@ -187,19 +148,16 @@ look on the bright side
 bring to an end
 broaden
 broadly
-broken
 broken English
 bronze
 brush away
 brush off
 brutal
-bubble
 bubble over with
 build up
 bulk
 in bulk
 the bulk of
-bulky
 bully
 bump into
 burden
@@ -209,7 +167,6 @@ beat about the bush
 beat around the bush
 by all accounts
 by and large
-by law
 by way of
 cabin
 call an election
@@ -223,30 +180,21 @@ capture
 take care of
 couldn't care less
 carriage
-carry
 catch up
 cater
-cause
 caution
-central
-cereal
 say for certain
 know for certain
 certainly not
 changeable
 chaotic
 character
-charge
 chatty
-cheap
 check up on
 check out
 check on
-chilly
 cholesterol
 chore
-cinema
-civil
 civilization
 civilisation
 claim
@@ -262,29 +210,23 @@ clinical
 round the clock
 close off
 be close to
-closely
 closeness
 clutch
 coal
-code
 collaborate
 collaboration
 with flying colours
-column
 come easily
 come naturally
 come first
 come to mind
 when it comes to
 how come
-comfort
 command
 commodity
-common
 in common with
 commonly
 commute
-company
 be good company
 comparable
 comparative
@@ -352,7 +294,6 @@ convenience
 convention
 conventional
 conventional wisdom
-conversation
 hold a conversation
 convey
 convincing
@@ -857,7 +798,6 @@ in favour
 in the form of
 in your heart
 in the hope of
-be in interest
 in the light of
 in moderation
 be in two minds
@@ -933,7 +873,6 @@ intense
 intensively
 interaction
 interactive
-interest
 interestingly
 interfere
 interference
@@ -942,23 +881,17 @@ interpret
 introduction
 invade
 invaluable
-invite
 irritate
 isolated
 isolation
 issue
 itinerary
-jam
 jargon
 jealousy
 joint
 jointly
-joke
 crack a joke
 be a joke
-journal
-judge
-junk
 will just have to do
 justified
 juvenile
@@ -974,15 +907,12 @@ keep a low profile
 be key to
 kick in
 kick off
-kill
-king
 knob
 know inside out
 before you know it
 know what you are talking about
 knowledgeable
 be known to do
-label
 labour
 the labour market
 be lacking in
@@ -992,13 +922,9 @@ landmark
 foul language
 strong language
 by and large
-last
 launch
-by law
-lawn
 lay down
 layout
-leader
 leadership
 the leadership
 at the very least
@@ -1006,15 +932,10 @@ to say the least
 leave doing
 left-wing
 legal action
-legend
 legendary
-length
-lengthen
-lengthy
 couldn't care less
 lessen
 let alone
-level
 liability
 liable
 liberal
@@ -1036,17 +957,11 @@ literacy
 little
 loan
 location
-log
-logic
 loneliness
-long
 long-time
 look on the bright side
-lose
-loss
 be lost without
 lounge
-low
 keep a low profile
 low-key
 be in luck
@@ -1054,26 +969,20 @@ luxurious
 luxury
 machinery
 magistrate
-magnetic
 magnificently
 make time
 make ends meet
-make it
 make yourself at home
 make an exception
 make a point of doing
 make yourself understood
 mammal
-manage
 mansion
 as many as
-march
-mark
 the labour market
 masculine
 mass
 master
-mat
 match
 material
 a matter of course
@@ -1095,7 +1004,6 @@ mess about
 middle
 might
 migration
-mind
 mile
 military
 put mind at ease
@@ -1103,7 +1011,6 @@ be in two minds
 come to mind
 miner
 mingle
-minimal
 minimize
 mining
 ministry
@@ -1124,19 +1031,15 @@ modification
 modify
 monitor
 monotonous
-moral
 for the most part
 motivate
 motivation
-mouth
-move on
 movement
 not much of a
 multiple
 mundane
 municipal
 face the music
-musical
 mustard
 mutual
 all to myself
@@ -1145,8 +1048,6 @@ myth
 naive
 naked
 namely
-nap
-narrow
 narrow-minded
 natural
 naturally
@@ -1161,7 +1062,6 @@ needless to say
 neglect
 negotiate
 negotiation
-nerve
 nervousness
 network
 networking
@@ -1181,7 +1081,6 @@ nomination
 nonetheless
 non-existent
 the norm
-return to normal
 not a
 notable
 notably
@@ -1228,7 +1127,9 @@ omit
 be on a committee
 on the basis of
 be on the ball
-on airon television or radioon hold
+on air
+on television or radio
+on hold
 on the horizon
 on loan
 on site
@@ -1402,10 +1303,14 @@ purely
 purity
 pursue
 push
-put in a difficult positionput your mind toput into practiceput a stop to
+put in a difficult position
+put your mind to
+put into practice
+put a stop to
 puzzle
 pyramid
 qualification
+qualified
 question
 quote
 race
@@ -1703,7 +1608,6 @@ spokesperson
 sponsorship
 sporty
 spread
-spy
 squeeze
 stability
 stable
@@ -1809,7 +1713,6 @@ talkative
 tank
 target
 tasteless
-tax
 teamwork
 tear out of
 shed tears
@@ -1857,12 +1760,10 @@ take your time
 behind the times
 it's only a matter of time
 time-consuming
-tip
 to say the least
 to do so
 to spare
 to the contrary
-toast
 tobacco
 token
 tolerant
@@ -1900,7 +1801,6 @@ turnover
 think twice
 twist
 be in two minds
-type
 ultimate
 ultimately
 unaffordable
@@ -1923,7 +1823,6 @@ unfold
 unforeseen
 unhelpful
 be unique to
-unit
 unite
 unity
 universally
@@ -1975,7 +1874,6 @@ verify
 version
 versus
 vertical
-vest
 vice versa
 with a view to doing
 viewpoint
@@ -1993,9 +1891,7 @@ walker
 wardrobe
 warrior
 running water
-wave
 in no way
-by way
 have your own way
 the easy way out
 weaken
@@ -2015,7 +1911,6 @@ widespread
 wisdom
 wisely
 wit
-witch
 with the aid of
 with flying colours
 with a view to doing
@@ -2039,41 +1934,3 @@ wrongly accused
 wrongly convicted
 as yet
 youngster
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-

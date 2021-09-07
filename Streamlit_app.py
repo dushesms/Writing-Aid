@@ -1,11 +1,12 @@
+import base64
+import time
 import streamlit as st
 from PIL import Image
-import topic_recognition
 import grammar_spell as spell_with_grammar_checker
-import time
 import lexical_complexity_level_count as lcx
-import base64
-import assessment_level
+import topic_recognition
+import predict_grade
+import calculate_final_level
 
 @st.cache( allow_output_mutation=True )
 def get_base64_of_bin_file(bin_file):
@@ -22,7 +23,7 @@ def set_png_as_page_bg(png_file):
     background-size: cover;
     }
     </style>
-    ''' % bin_str
+    '''% bin_str
 
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
@@ -41,7 +42,7 @@ color = st.select_slider('Rate yourself as an English writer',
 st.write("Now you can check what the 'Typewriter' says. Write your text or paste from a document and see the results.")
 
 option = st.selectbox('Choose what you want to check: ',
-    ['Check your writing', 'See the results'])
+    ['Check your writing', 'Understand the results'])
 
 if option == 'Check your writing':
     my_slot = st.empty()
@@ -51,28 +52,32 @@ if option == 'Check your writing':
         'Which aspect of your writing do you want to check?',
         ['1. Spelling and Grammar',
          '2. Lexis and topics complexity',
-         '3. Graded in comparison with similar works'] )
+         '3. Predicted grade'] )
 
     if answer == '1. Spelling and Grammar':
         st.write("You can see if you have any mistakes and their percent % in the whole text. Lower number means fewer mistakes.")
         my_bar = st.progress(0)
         for percent_complete in range(100):
             time.sleep(0.1)
-            my_bar.progress( percent_complete + 1 )
+            my_bar.progress(percent_complete + 1)
         with st.spinner('Please wait while we check your work'):
             time.sleep(10)
         st.success('Done!')
         spell_with_grammar_checker.example_check(text)
     elif answer == '2. Lexis and topics complexity':
         st.write("The more advanced vocabulary you use, the higher is your level of English.")
-        st.write('Predicted topic: ', topic_recognition.predict_topic(text))
-        lcx._lang_level(text)
-    elif answer == '3. Graded in comparison with similar works':
-        st.write("This feature is still in progress. It seems like your predicted level is ", assessment_level.predict(text))
-elif option == 'See the results':
-    st.write("There are six levels of English according to CEFR: ")
-    levels_img = Image.open("file.png")
-    st.image(levels_img)
-    st.write("See what your level is and read descriptions of each level. ")
-
-
+        st.write( 'There are 6 levels of English where 1 means "Beginner" and 6 is "Proficient".' )
+        st.write( "Lexical density shows the percentage of words of each level in the whole text." )
+        st.write("The words were taken from the Language Portfolium which is the minimum of words chosen for each level. There are 1500-2500 words for a level approximately.")
+        st.write('Predicted topic: {topic}.'.format(topic= topic_recognition.predict_topic(text)))
+        lcx.topic_level(text)
+        lcx.write_lex_density(text)
+    elif answer == '3. Predicted grade':
+        st.write("Your predicted grade is {num}% which corresponds to grade {letter}.".format(num=predict_grade.text_predict(text), letter= predict_grade.grade_converter(predict_grade.text_predict(text))))
+elif option == 'Understand the results':
+    text = st.text_area(label='writing', value="Type here..." )
+    st.write("There are six levels of English according to CEFR.")
+    st.write( "Your calculated level is marked RED." )
+    chart = calculate_final_level._build_graph(text)
+    st.altair_chart(chart)
+    st.write("See what your level is and read descriptions of each level.")

@@ -1,7 +1,7 @@
+import re
 import nltk
 import streamlit as st
 from __init__ import annotated_text
-import re
 
 def tokenize_input(text):
     words = nltk.word_tokenize(text)
@@ -9,24 +9,25 @@ def tokenize_input(text):
     return text
 
 def write_results(text:str, p:float, d:dict):
+    text_copy = text[:]
     st.write("Percentage of mistakes: " + str(round(p, 2)) + "%")
     #print(f"{text=}, {p=}, {d=}")
-    splitted_text = text.split()
+    splitted_text = text_copy.split()
     l = len(splitted_text) / 13 * 28
 
     errors_metadata = []
     for key, value in d.items():
         mistake_word = value['incorrect']
-        if mistake_word not in text:
+        if mistake_word not in text_copy:
             continue
-        #if mistake_word in text:
-        find_the_word = re.finditer(mistake_word, text)
-        for match in find_the_word:
-            start = match.start()
-            end = match.end()
-            #start = text.find(mistake_word)
-            #end = start + len(mistake_word)
-            errors_metadata.append((start, end))
+        if mistake_word in text_copy:
+            find_the_word = re.finditer('[^A-Za-z]'+mistake_word+'[^A-Za-z]', text )
+            for match in find_the_word:
+                start = match.start()
+                end = match.end()
+                # start = text.find(mistake_word)
+                # end = start + len(mistake_word)
+                errors_metadata.append( (start, end) )
 
     text_with_annotations = []
     prev_end = 0
@@ -75,10 +76,3 @@ def write_results(text:str, p:float, d:dict):
                     splitted_text[i - 1] = (splitted_text[i - 1], "", "#faa")    
         
         """
-
-
-"""annotated_word = (text[start:end], "", "#faa")
-            splitted_text.append(text[:start])
-            splitted_text.append(annotated_word)
-            splitted_text_end.append(text[end:])
-        annotated_text(150, *splitted_text)"""

@@ -16,7 +16,7 @@ def _calculate_actual_percentage_of_incorrect(text:str, mistake_keys: List[str])
     errors_count = len(mistake_keys)
     text_keys_without_error_count = len(text_keys) - errors_count
 
-    return percentage_of_incorrect( text_keys_without_error_count, errors_count)
+    return percentage_of_incorrect(text_keys_without_error_count, errors_count)
 
 
 def example_check(text: str):
@@ -54,4 +54,4 @@ def example_check(text: str):
         )
         write_results(text, result.percentage_of_incorrect, result.data)
     else:
-        streamlit.write( "Sorry temporary unavailable")
+        streamlit.write("Sorry, temporary unavailable")

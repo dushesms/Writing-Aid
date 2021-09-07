@@ -1,18 +1,19 @@
 from textblob import TextBlob
 import nltk
-from spellchecker import SpellChecker
 import jamspell
 import enchant
 from domain import SuggestCorrection
 from utils import percentage_of_incorrect
 from write_results import write_results
+from collections import OrderedDict
 
+#this function compares the raw input text and corrected text which is the base for
 def compare(text1, text2):
     l1 = text1.split()
     l2 = text2.split()
     correct = 0
     incorrect = 0
-    dict_of_incorrect = {}
+    dict_of_incorrect = OrderedDict()
     for i in range(0, len(l1)):
         if l1[i] != l2[i]:
             incorrect += 1
@@ -68,7 +69,7 @@ def spell_check_norvig(text):
     spell = SpellChecker()
     splitted_text = text.split()
     misspelled = spell.unknown(splitted_text)
-    d = {}
+    d = OrderedDict()
 
     for word in misspelled:
         index = 0
@@ -89,7 +90,7 @@ def spell_check_norvig(text):
 def spell_check_enchant(text):
     glossary = enchant.Dict("en_US")
     splitted_text = text.split()
-    d = {}
+    d = OrderedDict()
     misspelled = []
     for word in splitted_text:
         if glossary.check(word):
@@ -108,10 +109,6 @@ def spell_check_enchant(text):
         data=d,
         percentage_of_incorrect=p
     )
-
-def spell_check_enchant_with_print_result(text):
-    result = spell_check_enchant(text)
-    write_results(text, result.percentage_of_incorrect, result.data)
 
 
 

@@ -15,7 +15,7 @@ from sklearn.metrics import f1_score
 from sklearn.metrics import average_precision_score
 
 
-df = pd.read_csv('voted-kaggle-dataset - voted-kaggle-dataset.csv')
+df = pd.read_csv('topics eaquals.csv')
 
 df_topic = df[["Tags", "Description"]]
 df_topic['Text'] = df_topic['Description']
