@@ -1,6 +1,6 @@
+from spellchecker import SpellChecker
 from textblob import TextBlob
 import nltk
-import enchant
 from domain import SuggestCorrection
 from utils import percentage_of_incorrect
 from write_results import write_results
