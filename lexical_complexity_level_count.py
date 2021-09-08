@@ -8,6 +8,7 @@ import nltk
 nltk.download('wordnet')
 import os
 
+
 def round_num(score):
   decimal = score - int(score)
   if decimal >= 0.5:
@@ -117,7 +118,7 @@ def write_lex_density(text):
     lex_dens_list,words_found = _lang_level(text)
     st.write('Based on your topic and vocabulary complexity, your level of English is {level_av}.'.format(level_av=level_av))
     for i in range (0,len(lex_dens_list)):
-      st.write('Percentage of words from level {num} in your text is: {lex_density}%  Words you used: {words}'.format(num = i+1, lex_density=lex_dens_list[i], words =  list(words_found[i])))
+      st.write('Percentage of words from level {num} in your text is: {lex_density}% : {words}'.format(num = i+1, lex_density=lex_dens_list[i], words =  words_found[i]))
       i +=1
 
   except Exception:

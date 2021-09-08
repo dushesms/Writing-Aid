@@ -60,7 +60,7 @@ if option == 'Check your writing':
         for percent_complete in range(100):
             time.sleep(0.1)
             my_bar.progress(percent_complete + 1)
-        with st.spinner('Please wait while we check your work'):
+        with st.spinner('Please wait while we are checking your work'):
             time.sleep(10)
         st.success('Done!')
         spell_with_grammar_checker.example_check(text)
@@ -68,7 +68,7 @@ if option == 'Check your writing':
         st.write("The more advanced vocabulary you use, the higher is your level of English.")
         st.write( 'There are 6 levels of English where 1 means "Beginner" and 6 is "Proficient".' )
         st.write( "Lexical density shows the percentage of words of each level in the whole text." )
-        st.write("The words were taken from the Language Portfolium which is the minimum of words chosen for each level. There are 1500-2500 words for a level approximately.")
+        st.write("The words were taken from the Language Portfolio which is the minimum of words chosen for each level. There are 1500-2500 words for a level approximately.")
         st.write('Predicted topic: {topic}.'.format(topic= topic_recognition.predict_topic(text)))
         lcx.topic_level(text)
         lcx.write_lex_density(text)

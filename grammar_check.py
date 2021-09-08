@@ -1,7 +1,8 @@
 import language_tool_python
+from gingerit.gingerit import GingerIt
+from domain import SuggestCorrection
 from write_results import write_results
 from nlprule import Tokenizer, Rules
-from domain import SuggestCorrection
 from collections import OrderedDict
 
 def compare(text1, text2):
@@ -25,7 +26,7 @@ def nlp_rule_check(text):
     splitted_text = text.split()
     tokenizer = Tokenizer.load("en")
     rules = Rules.load("en", tokenizer)
-    d = {}
+    d = OrderedDict()
     index = -1
     for s in rules.suggest(text):
         start = s.start
@@ -55,6 +56,7 @@ def grammar_check(text: str):
     matches = tool.check(text)
     matches = [rule for rule in matches if not is_bad_rule(rule)]
 
+    from collections import OrderedDict
     d = OrderedDict()
     index = -1
     for match in matches:
@@ -74,5 +76,11 @@ def grammar_check(text: str):
 def grammar_check_with_print_result(text: str):
     result = grammar_check(text)
     write_results(text, result.percentage_of_incorrect, result.data)
+
+
+def grammar_check_ginger(text):
+    text = text.split()
+    parser = GingerIt()
+    parser.parse( text )
 
 

@@ -1,6 +1,6 @@
-from spellchecker import SpellChecker
 from textblob import TextBlob
 import nltk
+import jamspell
 from domain import SuggestCorrection
 from utils import percentage_of_incorrect
 from write_results import write_results
@@ -68,7 +68,7 @@ def spell_check_norvig(text):
     spell = SpellChecker()
     splitted_text = text.split()
     misspelled = spell.unknown(splitted_text)
-    d = {}
+    d = OrderedDict()
 
     for word in misspelled:
         index = 0
@@ -89,7 +89,7 @@ def spell_check_norvig(text):
 def spell_check_enchant(text):
     glossary = enchant.Dict("en_US")
     splitted_text = text.split()
-    d = {}
+    d = OrderedDict()
     misspelled = []
     for word in splitted_text:
         if glossary.check(word):
