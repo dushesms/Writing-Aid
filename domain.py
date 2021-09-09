@@ -1,8 +1,8 @@
 from dataclasses import dataclass
-from typing import TypedDict, Dict, List
+from typing import Dict, List
 
 
-class CorrectionType(TypedDict):
+class CorrectionType(Dict):
     correct: List[str]
     position: int
 
