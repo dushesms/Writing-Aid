@@ -1,10 +1,8 @@
 from textblob import TextBlob
 import nltk
-import jamspell
 from domain import SuggestCorrection
 from utils import percentage_of_incorrect
 from write_results import write_results
-from collections import OrderedDict
 
 #this function compares the raw input text and corrected text which is the base for
 def compare(text1, text2):
@@ -12,7 +10,7 @@ def compare(text1, text2):
     l2 = text2.split()
     correct = 0
     incorrect = 0
-    dict_of_incorrect = OrderedDict()
+    dict_of_incorrect = {}
     for i in range(0, len(l1)):
         if l1[i] != l2[i]:
             incorrect += 1
