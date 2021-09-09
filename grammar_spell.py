@@ -29,14 +29,12 @@ def example_check(text: str):
     suggestions_data = OrderedDict()
     checkers = [
         grammar_check,
-        spell_check_js,
         nlp_rule_check
     ]
     attempt_check_count = len(checkers)
 
     for checker in [
         grammar_check,
-        spell_check_js,
         nlp_rule_check
     ]:
         try:
