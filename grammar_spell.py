@@ -7,7 +7,6 @@ from grammar_check import grammar_check
 from grammar_check import nlp_rule_check
 from utils import percentage_of_incorrect
 from write_results import write_results
-from collections import OrderedDict
 
 logger = logging.getLogger(__name__)
 
@@ -26,7 +25,7 @@ def example_check(text: str):
     # grammar_result = grammar_check(text)
     # spell_jamspell_result = spell_check_js(text)
     # nlp_rule_result = nlp_rule_check(text)
-    suggestions_data = OrderedDict()
+    suggestions_data = {}
     checkers = [
         grammar_check,
         nlp_rule_check
