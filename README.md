@@ -7,3 +7,9 @@ It can:
 Full description and examples could be found in this video!
 
 https://player.vimeo.com/video/601283925?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=500476c5ac
+
+
+
+
+
+for the predict_grade.py you will need glove.6B.200d.txt file which could be found at https://www.kaggle.com/incorpes/glove6b200d. 
